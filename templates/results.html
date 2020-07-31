@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title></title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> -->
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="resultswindow">
+			<h1>Hate Speech Filter<h1>
+		</div>
+		<h3>Hate speech filter, please see the verified text below</h3>		
+	</div>
+	</header>
+
+	<div class="results">
+	<form >
+	<fieldset>
+	<p>
+	{% if detected == comment%}
+	<h2 style="color:red;">No change</h2>
+	{% elif detected != comment:%}
+	{% print(detected)%}
+	{% endif %}
+	</p>
+	
+	</fieldset>
+	</form>
+	</div>
+</body>
+</html>

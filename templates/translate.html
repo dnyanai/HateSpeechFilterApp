@@ -1,0 +1,84 @@
+<html>
+<head>
+        <title></title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> -->
+</head>
+<body>
+
+        <header>
+                <div class="container">
+                <div id="translatewindow">
+                        <h1>Hate Speech Filter<h1>
+                </div>
+                <h3>Hate speech filter, please see the verified text below</h3>
+        </div>
+        </header>
+
+        <div class="translate">
+        <form >
+        <fieldset>
+        <p>
+	<indent>
+	{% print("The usrtxt is:\n")%}
+	<br>
+	{% print( inText)%}
+	<br>
+	<br>
+	<br>
+	{%if '' in badWord:%}
+		{%print("No bad words present in the given text!")%}
+	{%else:%}		
+		{% print("The badwords in the given text is/are:")%}
+		<br>
+		{% print(badWord)%}
+	{%endif%}
+	<br>
+	<br>
+	<br>	
+	{%if badPhrase==[]:%}
+		{%print("No bad phrases present in the given text!")%}
+	{%else:%}
+		{% print("The bad phrases in the given text is/are:")%}
+		<br>
+		{% print(badPhrase)%}
+	{%endif%}
+	<br>
+	<br>
+	<br>
+	{% print("The english translation of the given text is/are:") %}
+	<br>
+	{% print(usrTxtEng)%}
+	<br>
+	<br>
+	<br>
+	{% print("The verified usrtxt is:\n")%}
+	<br>
+	{% print( verifiedText)%}
+	<br>
+	<br>
+	<br>
+	{%if ''  in BWEng:%}
+		{%print("No bad words in the given text!")%}
+	{%else:%}
+		{% print("The english translation of badwords in the given text is/are:") %}
+		<br>
+		{% print(BWEng)%}	
+	{%endif%}
+	<br>
+	<br>
+	<br>	
+	{%if BPEng !=[]:%}
+		{% print("The english translation of bad phrases in the given text is/are:") %}
+		<br>
+		{% print(BPEng)%}
+	{%else:%}
+		{%print("No bad phrases in the given text!")%}
+	{%endif%}
+	</indent>
+        </p>
+        </fieldset>
+        </form>
+        </div>
+</body>
+</html>
+
