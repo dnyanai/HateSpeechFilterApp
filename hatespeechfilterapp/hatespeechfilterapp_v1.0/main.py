@@ -14,7 +14,7 @@ import connect_getdata
 
 
 app = Flask(__name__)
-app.secret_key = "9890872061"
+app.secret_key = "9000061"
 
 @app.route('/')
 def index():
