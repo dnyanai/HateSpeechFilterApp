@@ -11,10 +11,10 @@ def connect_return_data():
 	phrases_sql = []
 
 	config = {
-	    'user': 'root',
-	    'password': 'SouthAfrica_2020',
-	    'host': '35.236.104.20',
-            'database' : 'hate_speech_dict',
+	    'user': {DATABASE USER NAME},
+	    'password': {DATABASE PASSOWRD},
+	    'host': {DATABASE IP},
+            'database' : {DATABASE NAME},
 #	    'client_flags': [ClientFlag.SSL],
 	    'ssl_ca': '/home/dsurkutwar/mysqlCerts/ca.pem',
 	    'ssl_cert': '/home/dsurkutwar/mysqlCerts/client-cert.pem',
