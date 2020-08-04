@@ -31,11 +31,11 @@ def connect_return_data():
 	cur.execute("SELECT * FROM tb_all;")
 
 	# print all the first cell of all the rows
-
+	
 	for row in cur.fetchall():
 	  words_sql.append(row[0])
 	  phrases_sql.append(row[1])
-
+	
 
 	db.close()
 
@@ -43,3 +43,7 @@ def connect_return_data():
 	print(phrases_sql)
 	return(words_sql,phrases_sql)
 
+
+#if __name__=="__main__":
+
+#	connect_return_data()
